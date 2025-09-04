@@ -1,155 +1,306 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charles Maina - Portfolio</title>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charles Maina — Portfolio</title>
+  <meta name="description" content="Landing page and portfolio for Charles Maina — ICT, web, and systems.">
+  <style>
+    :root{
+      --blue:#0a74da;           /* theme blue (header/footer) */
+      --blue-700:#085fb1;
+      --text:#333;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --link:#0a74da;
+    }
+    /* Reset & base */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+      color:var(--text);
+      background:var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus-visible, button:focus-visible { outline:3px solid rgba(10,116,218,.35); outline-offset:2px; border-radius:8px }
 
-  
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* dp styles */
-  .dp {
-    margin-left: 2%;
-    /* margin-right: 0; Add margin to separate from other elements */
-    cursor: pointer; /* Add cursor pointer */
+    /* Header */
+    header{
+      background:var(--blue);
+      color:#fff;
+      position:sticky; top:0; z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
+    }
+    .container{
+      max-width:1100px; margin:0 auto; padding:0 16px;
+    }
+    .header-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
 
-}
-  /* Body */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f9;
-    color: #333;
-    padding: 20px;
-  }
-  
-  /* Header */
-  header {
-    /* text-align: center; */
-    padding: 20px;
-    background: #004080;
-    color: #fff;
-    border-radius: 10px;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  /* Navigation */
-  nav {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #004080;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #0073e6;
-  }
-  
-  /* Sections */
-  section {
-    margin: 20px 0;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-    color: #004080;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    background: #004080;
-    color: #fff;
-    border-radius: 10px;
-  }
+    /* Left group: avatar + name */
+    .brand{
+      display:flex; align-items:center; gap:14px; min-width:0;
+    }
+    .avatar{
+      width:48px; height:48px; border-radius:50%;
+      object-fit:cover; border:2px solid rgba(255,255,255,.7);
+      background:#e8eef7;
+    }
+    .name{
+      font-weight:700; font-size:1.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
 
-</style>
-  
+    /* Nav with dropdowns */
+    nav ul{list-style:none; margin:0; padding:0; display:flex; align-items:center; gap:18px}
+    .menu-item{position:relative}
+    .menu-link{
+      display:inline-flex; align-items:center; gap:8px;
+      color:#fff; font-weight:600; padding:8px 6px; border-radius:8px;
+    }
+    .menu-link:hover{background:rgba(255,255,255,.12)}
+    .menu-link .icon{
+      display:inline-flex; width:16px; height:16px; line-height:0;
+      opacity:.9;
+    }
+    .submenu{
+      position:absolute; right:0; top:calc(100% + 8px);
+      background:#fff; color:var(--text);
+      border:1px solid #e6ebf2; border-radius:10px;
+      min-width:210px; box-shadow:0 12px 24px rgba(10,20,40,.12);
+      padding:8px; display:none;
+    }
+    .submenu a{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 10px; border-radius:8px; color:var(--text);
+    }
+    .submenu a:hover{background:#f2f6fb}
+    /* Show submenu on hover or keyboard focus */
+    .menu-item:hover .submenu,
+    .menu-item:focus-within .submenu{ display:block }
 
+    /* Hero / main */
+    .hero{
+      padding:56px 0 36px;
+    }
+    .card{
+      background:var(--card); border:1px solid #e9eef5; border-radius:16px;
+      padding:22px 20px;
+      box-shadow:0 6px 16px rgba(10,20,40,.06);
+    }
+    .intro{
+      display:grid; grid-template-columns:120px 1fr; gap:20px; align-items:center;
+    }
+    .intro .big-avatar{
+      width:120px; height:120px; border-radius:16px; object-fit:cover;
+      border:3px solid #e9eef5; background:#e8eef7;
+    }
+    .intro h1{margin:0 0 6px 0; font-size:1.6rem}
+    .intro p{margin:0; color:#4b5563}
+
+    .cta{
+      margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer;
+      border:1px solid #dbe5f3; background:#fff; color:var(--link);
+    }
+    .btn.primary{ background:var(--blue); color:#fff; border-color:var(--blue-700) }
+    .btn:hover{ filter:brightness(1.03) }
+
+    /* Footer */
+    footer{
+      margin-top:40px;
+      background:var(--blue); color:#fff; padding:18px 0;
+    }
+    footer .foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:.95rem }
+
+    /* Responsive */
+    @media (max-width:900px){
+      nav ul{gap:12px}
+    }
+    @media (max-width:720px){
+      .header-bar{ flex-wrap:wrap; row-gap:10px }
+      nav{ width:100% }
+      nav ul{ justify-content:flex-start; flex-wrap:wrap; gap:10px }
+      .intro{ grid-template-columns:1fr; text-align:left }
+      .intro .big-avatar{ width:96px; height:96px; border-radius:50% }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-   
-    <section id="about">
-     
-      <div class="dp">
-        <img src="images/profile.png" alt="Charles Maina" width="95px" style="border-radius: 60%;" > </div>
+    <div class="container header-bar">
+      <!-- Left: profile picture, then name on the same row -->
+      <div class="brand">
+        <img class="avatar" src="images/profile.png" alt="Portrait of Charles Maina" />
+        <div class="name" aria-label="Name">Charles Maina</div>
+      </div>
 
-        <h1>Hi, I'm Charles Maina</h1>
-    <p>Aspiring ICT Specialist | Web Developer | Tech Enthusiast</p>
-        <h2>About Me</h2>
+      <!-- Right: nav links with dropdowns and an icon after the link text -->
+      <nav aria-label="Primary">
+        <ul>
+          <!-- About -->
+          <li class="menu-item">
+            <a href="#about" class="menu-link" aria-haspopup="true">
+              <span>About Me</span>
+              <!-- chevron icon -->
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" focusable="false" role="img" aria-label="expand">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                </svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="About submenu">
+              <a href="#about" role="menuitem">Overview
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
+                </span>
+              </a>
+              <a href="#skills" role="menuitem">Skills
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
+                </span>
+              </a>
+              <a href="docs/Charles_Maina_CV.pdf" role="menuitem">Download CV
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
+            </div>
+          </li>
 
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="header.html">Header</a>
-        </nav>
-       
-        <p>
-          I hold a degree in Information Technology and have hands-on experience in LAN cabling,
-          CCTV installation, PC maintenance, software installations, and web design.
-        </p>
-      </section>
-      
-    
+          <!-- Contacts -->
+          <li class="menu-item">
+            <a href="#contact" class="menu-link" aria-haspopup="true">
+              <span>Contacts</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Contacts submenu">
+              <a href="mailto:mainacharlesmca@gmail.com" role="menuitem">Email
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+                </span>
+              </a>
+              <a href="https://github.com/charles-maina" target="_blank" rel="noopener" role="menuitem">GitHub
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.24 3.4 9.68 8.13 11.25.6.1.82-.26.82-.58v-2.12c-3.31.73-4.01-1.43-4.01-1.43-.55-1.42-1.35-1.8-1.35-1.8-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.88 2.83 1.34 3.52 1.02.11-.78.42-1.34.76-1.65-2.64-.31-5.41-1.36-5.41-6.06 0-1.34.47-2.43 1.25-3.29-.13-.31-.54-1.58.12-3.3 0 0 1.02-.33 3.35 1.25.97-.27 2.01-.41 3.05-.42 1.04.01 2.08.15 3.05.42 2.33-1.58 3.35-1.25 3.35-1.25.66 1.72.25 2.99.12 3.3.78.86 1.25 1.95 1.25 3.29 0 4.71-2.78 5.74-5.43 6.05.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.57A11.51 11.51 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg>
+                </span>
+              </a>
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" role="menuitem">LinkedIn
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.44 2.44 0 0 1 6.94 6.5zM4.75 8.75h4.37v10.5H4.75zm6.13 0h4.2v1.58h.06c.59-1.13 2.04-2.32 4.2-2.32 4.49 0 5.32 2.95 5.32 6.79v4.45H20.3v-3.95c0- .94-.02-2.14-1.3-2.14-1.3 0-1.5 1.02-1.5 2.07v4.02h-4.62z"/></svg>
+                </span>
+              </a>
+            </div>
+          </li>
+
+          <!-- Projects -->
+          <li class="menu-item">
+            <a href="#projects" class="menu-link" aria-haspopup="true">
+              <span>Projects</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Projects submenu">
+              <a href="#projects" role="menuitem">Featured
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+              </a>
+              <a href="projects.html" role="menuitem">All Projects
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Main content -->
+  <main class="container hero">
+    <section class="card intro" id="about">
+      <!-- Big avatar below header; reuse same image path -->
+      <img class="big-avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina">
+      <div>
+        <h1>ICT Specialist & Web Developer</h1>
+        <p>
+          Hands-on with LAN cabling & setup, CCTV installation, PC maintenance, software installs,
+          and modern web design. Passionate about reliable systems and clean user experiences.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects" aria-label="See featured projects">
+            <!-- right arrow -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8 8-8z"/></svg>
+            View Projects
+          </a>
+          <a class="btn" href="mailto:mainacharlesmca@gmail.com" aria-label="Email Charles Maina">
+            <!-- mail icon -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+            Email Me
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p> 
-      I hold a degree in Information Technology and have hands-on experience in LAN cabling, 
-      CCTV installation, PC maintenance, software installations, and web design. I also have 
-      experience as a sales representative and ICT trainee.
-    </p>
-  </section>
+    <section class="card" id="skills" style="margin-top:16px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue)">Core Skills</h2>
+      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Web Design (HTML, CSS, PHP, Python)</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Django & MySQL Basics</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">LAN Cabling & Setup</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">CCTV Installation</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">PC Maintenance & Software</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><b>Exam Attendance Authentication System</b> (PHP)</li>
-      <li><b>Campus Clinic Management System</b> (Python)</li>
-      <li><b>University Clinic Management System</b> (Django, ongoing)</li>
-    </ul>
-  </section>
+    <section class="card" id="projects" style="margin-top:16px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue)">Featured Projects</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
+        <article style="border:1px solid #e6ebf2; border-left:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
+          <h3 style="margin:0 0 6px 0;">Exam Attendance Authentication System</h3>
+          <p style="margin:0; color:#4b5563;">PHP-based system for secure, efficient exam attendance tracking.</p>
+        </article>
+        <article style="border:1px solid #e6ebf2; border-left:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
+          <h3 style="margin:0 0 6px 0;">Campus Clinic Management</h3>
+          <p style="margin:0; color:#4b5563;">Python project for streamlining clinic operations and patient records.</p>
+        </article>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: mainacharlesmca@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/charles-maina" target="_blank">github.com/charles-maina</a></p>
-  </section>
+    <section class="card" id="contact" style="margin-top:16px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue)">Contact</h2>
+      <p style="margin:0">Email: <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">mainacharlesmca@gmail.com</a></p>
+      <p style="margin:6px 0 0 0">GitHub: <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">github.com/charles-maina</a></p>
+      <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">linkedin.com/in/yourprofile</a></p>
+    </section>
+  </main>
 
-  
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Charles Maina. All rights reserved.</p>
-
+    <div class="container foot">
+      <div>&copy; <span id="year"></span> Charles Maina</div>
+      <div>Built On 04.09.2025</div>
+    </div>
   </footer>
+
+  <!-- Tiny inline script-free year fallback using CSS content not possible; so we set the year server-side or just keep current year text. For now, keep static: -->
+  <script>
+    /* Optional: auto-update footer year without external files */
+    (function(){ var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }})();
+  </script>
 </body>
 </html>
