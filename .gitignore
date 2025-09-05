@@ -1,0 +1,13 @@
+# Ignore VS Code settings & extensions
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules (if you ever add JS frameworks later)
+node_modules/
+
+# Ignore Python caches (since you have some python folders)
+__pycache__/
+*.pyc

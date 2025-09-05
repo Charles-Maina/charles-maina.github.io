@@ -30,9 +30,9 @@
     /* Header */
     header{
       background:var(--blue);
-      color:#fff;
+      color:#ffffff;
       position:sticky; top:0; z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,.08);
+      box-shadow:0 2px 10px rgba(0,0,0,.08); 
     }
     .container{
       max-width:1100px; margin:0 auto; padding:0 16px;
@@ -47,13 +47,17 @@
     .brand{
       display:flex; align-items:center; gap:14px; min-width:0;
     }
+
+    /* MY PROFILE PHOTO HERE */
     .avatar{
-      width:48px; height:48px; border-radius:50%;
-      object-fit:cover; border:2px solid rgba(255,255,255,.7);
+      width:108px; height:108px; border-radius: 50%;
+      object-fit:cover; border:4px solid rgba(255,255,255,.7);
       background:#e8eef7;
     }
+
+    /* THE NAME IE CHA.. */
     .name{
-      font-weight:700; font-size:1.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      font-weight:1000; font-size:3.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
 
     /* Nav with dropdowns */
@@ -97,7 +101,7 @@
       display:grid; grid-template-columns:120px 1fr; gap:20px; align-items:center;
     }
     .intro .big-avatar{
-      width:120px; height:120px; border-radius:16px; object-fit:cover;
+      width:134px; height:210px; border-radius:16px; object-fit:cover;
       border:3px solid #e9eef5; background:#e8eef7;
     }
     .intro h1{margin:0 0 6px 0; font-size:1.6rem}
@@ -140,8 +144,8 @@
     <div class="container header-bar">
       <!-- Left: profile picture, then name on the same row -->
       <div class="brand">
-        <img class="avatar" src="images/profile.png" alt="Portrait of Charles Maina" />
-        <div class="name" aria-label="Name">Charles Maina</div>
+        <img class="avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina" />
+        <div class="name" aria-label="Name">CHARLES MAINA</div>
       </div>
 
       <!-- Right: nav links with dropdowns and an icon after the link text -->
@@ -169,7 +173,7 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
                 </span>
               </a>
-              <a href="docs/Charles_Maina_CV.pdf" role="menuitem">Download CV
+              <a href="docs/CV.pdf" role="menuitem">Download CV
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
                 </span>
@@ -196,7 +200,7 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.24 3.4 9.68 8.13 11.25.6.1.82-.26.82-.58v-2.12c-3.31.73-4.01-1.43-4.01-1.43-.55-1.42-1.35-1.8-1.35-1.8-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.88 2.83 1.34 3.52 1.02.11-.78.42-1.34.76-1.65-2.64-.31-5.41-1.36-5.41-6.06 0-1.34.47-2.43 1.25-3.29-.13-.31-.54-1.58.12-3.3 0 0 1.02-.33 3.35 1.25.97-.27 2.01-.41 3.05-.42 1.04.01 2.08.15 3.05.42 2.33-1.58 3.35-1.25 3.35-1.25.66 1.72.25 2.99.12 3.3.78.86 1.25 1.95 1.25 3.29 0 4.71-2.78 5.74-5.43 6.05.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.57A11.51 11.51 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg>
                 </span>
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" role="menuitem">LinkedIn
+              <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" role="menuitem">LinkedIn
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.44 2.44 0 0 1 6.94 6.5zM4.75 8.75h4.37v10.5H4.75zm6.13 0h4.2v1.58h.06c.59-1.13 2.04-2.32 4.2-2.32 4.49 0 5.32 2.95 5.32 6.79v4.45H20.3v-3.95c0- .94-.02-2.14-1.3-2.14-1.3 0-1.5 1.02-1.5 2.07v4.02h-4.62z"/></svg>
                 </span>
@@ -206,8 +210,8 @@
 
           <!-- Projects -->
           <li class="menu-item">
-            <a href="projects.html" class="menu-link">Projects
-            <!-- <a href="#projects" class="menu-link" aria-haspopup="true"> -->
+            <!-- <a href="projects.html" class="menu-link">Projects
+            <a href="#projects" class="menu-link" aria-haspopup="true"> -->
               <span>Projects</span>
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
@@ -235,12 +239,11 @@
   <main class="container hero">
     <section class="card intro" id="about">
       <!-- Big avatar below header; reuse same image path -->
-      <img class="big-avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina">
+      <img class="big-avatar" src="images/Pro.png" alt="Portrait of Charles Maina" >
       <div>
-        <h1>ICT Specialist & Web Developer</h1>
+        <h1>SOFTWARE ENGINEER, CYBER SECURITY SPECIALIST, UI/UX DESIGNER</h1>
         <p>
-          Hands-on with LAN cabling & setup, CCTV installation, PC maintenance, software installs,
-          and modern web design. Passionate about reliable systems and clean user experiences.
+        A detail-oriented software engineer with proven practical experience in network and system administration, cyber security, web development, UI/UX Design and graphic design. Experienced in resolving hardware/software issues, configuring user systems, and supporting IT infrastructure. Committed to delivering friendly, efficient software products that solve your day to day workplace challenges by leaveraging the unique capabilities of machine learning and AI models.
         </p>
         <div class="cta">
           <a class="btn primary" href="#projects" aria-label="See featured projects">
@@ -260,11 +263,18 @@
     <section class="card" id="skills" style="margin-top:16px;">
       <h2 style="margin:0 0 8px 0; color:var(--blue)">Core Skills</h2>
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Web Design (HTML, CSS, PHP, Python)</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Django & MySQL Basics</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">LAN Cabling & Setup</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">CCTV Installation</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">PC Maintenance & Software</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
+
+
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Networking (LAN/WAN Setup, IP Configuration). </li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">CCTV Installation, Configuration and Troubleshooting.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Hardware (PC Assembly, Maintenance, Repair).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
+
+
       </ul>
     </section>
 
@@ -273,11 +283,11 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
         <article style="border:1px solid #e6ebf2; border-left:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
           <h3 style="margin:0 0 6px 0;">Exam Attendance Authentication System</h3>
-          <p style="margin:0; color:#4b5563;">PHP-based system for secure, efficient exam attendance tracking.</p>
+          <p style="margin:0; color:#4b5563;">PHP-based system for secure, efficient exam attendance tracking for Institutions of higher learning.</p>
         </article>
         <article style="border:1px solid #e6ebf2; border-left:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
-          <h3 style="margin:0 0 6px 0;">Campus Clinic Management</h3>
-          <p style="margin:0; color:#4b5563;">Python project for streamlining clinic operations and patient records.</p>
+          <h3 style="margin:0 0 6px 0;">Clinic Management System</h3>
+          <p style="margin:0; color:#4b5563;">Python project for streamlining medical operations and patient records in a clinic and hospital environments.</p>
         </article>
       </div>
     </section>
@@ -285,8 +295,11 @@
     <section class="card" id="contact" style="margin-top:16px;">
       <h2 style="margin:0 0 8px 0; color:var(--blue)">Contact</h2>
       <p style="margin:0">Email: <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">mainacharlesmca@gmail.com</a></p>
-      <p style="margin:6px 0 0 0">GitHub: <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">github.com/charles-maina</a></p>
-      <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">linkedin.com/in/yourprofile</a></p>
+      <p style="margin:6px 0 0 0">GitHub: <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">github.com/charles</a></p>
+      <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">linkedin.com/in/charles</a></p>
+      <p style="margin:0">Phone: 0796303832 / 0110053971 </p>
+
+
     </section>
   </main>
 
