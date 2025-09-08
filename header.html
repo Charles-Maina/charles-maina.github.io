@@ -3,248 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mmust.ac.ke</title>
+    <title>Document</title>
     <style>
-        /* Global styles */
-        body {
-            position: relative;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-color: rgba(255, 255, 255, 0.8); /* Background color */
-        }
 
-        /* Header styles */
-        .header {
-            background-color: rgb(249, 249, 249);
-            display: flex;
-            /* align-items: center; Center items vertically */
-            height: 90px; /* Same height as the logo */
-            padding: 0; /* Remove padding */
-            position: relative; /* Ensure relative positioning */
-            margin-bottom: 20px;
-        }
-
-        /* Logo styles */
-        .logo {
-            margin-left: 0;
-            margin-right: 0; /* Add margin to separate from other elements */
-            cursor: pointer; /* Add cursor pointer */
-
-        }
-
-        /* Paragraph styles */
-        p{
-            color: blue;
-            margin: 0; /* Reset margin */
-            font-weight: bolder;
-            font-size: 13px;
-            margin-top: 30px;
-        }
-
-        p1 {
-            color: blue;
-            font-weight: bold;
-            font-size: 10px;
-            text-decoration: overline;
-            }
-
-            /* text for mmust  */
-
-        .mmustname{
-            margin-right: 50px;
-            padding: 0;
-            text-align: center;
-            cursor: pointer; /* Add cursor pointer */
-
-        }
-
-        /* of the system */
-        .name {
-            font-size: 40px;
-            font-weight: bold;
-            color: blue;
-            margin-top: 0; /* Add margin below the name */
-            cursor: pointer; /* Add cursor pointer */
-        }
-
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .header {
-        height: auto; /* Auto height for smaller screens */
+:root{
+      --blue:#0a74da;           /* theme blue (header/footer) */
+      --blue-700:#085fb1;
+      --text:#333;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --link:#0a74da;
     }
-    .name {
-        font-size: 30px; /* Reduce font size for smaller screens */
+    /* Reset & base */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+      color:var(--text);
+      background:var(--bg);
     }
-    p {
-        font-size: 10px; /* Reduce font size for smaller screens */
+    a{color:inherit;text-decoration:none}
+    a:focus-visible, button:focus-visible { outline:3px solid rgba(10,116,218,.35); outline-offset:2px; border-radius:8px }
+
+    /* Header */
+    header{
+      background:var(--blue);
+      color:#ffffff;
+      position:sticky; top:0; z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.08); 
+      max-height: 110PX;
     }
-    p1 {
-        font-size: 8px; /* Reduce font size for smaller screens */
+    .container{
+      max-width:1100px; margin:0 auto; padding:0 16px;
     }
-}
+    .header-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
 
-        /* Dropdown styles for ABOUT US button */
-        .dropdown {
-            margin-left: auto; /* Align dropdown to the right */
-            position: absolute; /* Position absolutely */
-            bottom: 0; /* Align at the bottom with some margin */
-            right: 165px; /* Align to the right */
-            
-        }
+    /* Left group: avatar + name */
+    .brand{
+      display:flex; align-items:center; gap:14px; min-width:0;
+    }
 
-        .dropdown-content {
-            display: none; /* Make the content flex */
-            position: absolute;
-            right:0;
-            background-color: #f9f9f9;
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            z-index: 1;
-            text-align: left;
-            color: black;
-            width: 300px; /* Adjust width to fit content */
-            top: 100%; /* Position dropdown content below the button */
-        }
+    /* MY PROFILE PHOTO HERE */
+    .avatar{
+      width:108px; height:108px; border-radius: 50%;
+      object-fit:cover; border:4px solid rgba(255, 255, 255, 0.7);
+      background:#e8eef7;
+      margin-top: -39px;
+      margin-left: -100PX;
+    }
 
-        .dropdown-content ul {
-            padding-left: 20px; /* Add some left padding to the list */
-            list-style-type: circle;
-        }
+    /* THE NAME IE CHA.. */
+    .name{
+       margin-top: -39px;
+      font-weight:500; font-size:3.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
 
-        /* Left container for text */
-        .left-container {
-            width: 30%;
-            padding: 0; /* Add some padding */
-            margin-right: 40px;
-        }
+    /* Nav with dropdowns */
+    nav ul{list-style:none; ; padding:0; display:flex;  margin-top: 67px; align-items:center; gap:1px}
+    .menu-item{position:relative }
+    .menu-link{
+      display:inline-flex; align-items:center; gap:8px;
+      color:#fff; font-weight:600; padding:8px 6px; border-radius:8px;
+    }
+    .menu-link:hover{background:rgba(255,255,255,.12)}
+    .menu-link .icon{
+      display:inline-flex; width:16px; height:16px; line-height:0;
+      opacity:.9;
+    }
 
-        /* Right container for image */
-        .right-container {
-            width: 100%;
-            background-image: url('/static/tech.jpg'); /* Add background image */
-            background-size: cover; /* Cover the container */
-            background-position: center; /* Center the background image */
-        }
+    /* THE BOX Containing ITEMS OF THE MENU, I.E DOWNLOAD CV, ALL PROJECTS... */
+    .submenu{
 
-       
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: flex;
-            text-decoration: none;
-        }
-        .dropbtn{
-            cursor: pointer; /* Add cursor pointer */
-        }
+      /* LEFT-0 : To have to space to the left of it */
+      position:absolute; left:0; top:calc(79%);
+      background:#dbf0cd; color:var(--text);
+      border:3px solid #0026ff; border-radius:10px;
+      min-width:140px; box-shadow:0 12px 24px rgba(10,20,40,.12);
+      padding:-5px; display:none;
+    }
+    .submenu a{
+      display:flex; align-items:left; justify-content:space-between;
+      padding:3px; border-radius:8px; color:var(--text);
+    }
+    .submenu a:hover{background:#77b4ff}
+    /* Show submenu on hover or keyboard focus */
+    .menu-item:hover .submenu,
+    .menu-item:focus-within .submenu{ display:block }
 
-        /* Hover effect for the About Us and Services buttons */
-        .dropbtn:hover {
-            font-weight: bolder;
-            color: blue; /* Change text color to blue on hover */
-        }
+    /* Hero / main */
+    .hero{
+      padding:56px 0 36px;
+    }
 
-        .dropbtn:hover::after {
-            content: ''; /* Add pseudo-element for the underline effect */
-            position: absolute; /* Position the underline */
-            bottom: 0; /* Align it at the bottom */
-            left: 10%; /* Start the underline slightly to the right */
-            width: 60%; /* Set the width to cover almost 60% of the button */
-            height: 3px; /* Height of the underline */
-            background-color: blue; /* Color of the underline */
-        }
 
-        /* Remove underline from links inside dropdown */
-        .dropdown-content a {
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-        }
-
-        /* Additional dropdown button styles */
-        .services-dropdown {
-            position: absolute;
-            bottom: 0;
-            right: 80px; /* Position the Services dropdown button */
-        }
-       .arrow {
-  border: solid rgb(88, 88, 88);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 2px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-        /* Logout button styles */
-        .logout {
-            position: absolute;
-            bottom: 0;
-            right: 10px; /* Position the Logout button */
-            cursor: pointer; /* Add cursor pointer */
-        }
-
-        .logout:hover {
-            color: red; /* Change color on hover */
-            font-weight: bolder;
-        }
     </style>
+
 </head>
+
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="images/admin1.jpg" alt="loading image" height="90px">
-        </div>
-        <div class="mmustname">
-        <p>MASINDE MULIRO UNIVERSITY OF<br>SCIENCE AND TECHNOLOGY</p>
-        <p1>University of Choice</p1>
-    </div>
-        <div class="name">CLINIC MANAGEMENT SYSTEM</div>
-        <!-- Dropdown button for About Us -->
-        <div class="dropdown">
-            <button class="dropbtn">About Us
-                <i class="arrow down"></i>
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <!-- Left container for text -->
-                <div class="left-container">
-                    <ul>
-                        <li><a href="/mission">Mission</a></li>
-                        <li><a href="/vision">Vision</a></li>
-                        <li><a href="/corevalues">Core Values</a></li>
-                        <li><a href="contactus">Need Help?</a></li>
-                    </ul>
-                </div>
-                <!-- Right container for image -->
-                <div class="right-container"></div>
+      <!-- Header -->
+  <header>
+    <div class="container header-bar">
+      <!-- Left: profile picture, then name on the same row -->
+      <div class="brand">
+        <img class="avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina" />
+        <div class="name" aria-label="Name">CHARLES MAINA</div>
+      </div>
+
+      <!-- Right: nav links with dropdowns and an icon after the link text -->
+      <nav aria-label="Primary">
+        <ul>
+          <!-- About -->
+          <li class="menu-item">
+            <a href="#about" class="menu-link" aria-haspopup="true">
+              <span>About Me</span>
+              <!-- chevron icon -->
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" focusable="false" role="img" aria-label="expand">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                </svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="About submenu">
+              <a href="#about" role="menuitem">Overview
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
+                </span>
+              </a>
+              <a href="#skills" role="menuitem">Skills
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
+                </span>
+              </a>
+              <a href="docs/cv - CM.jpg" role="menuitem">Download CV
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
             </div>
-        </div>
-        <!-- Dropdown button for Services -->
-        <div class="dropdown services-dropdown">
-            <button class="dropbtn">Services
-                <i class="arrow down"></i>
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <!-- Left container for text -->
-                <div class="left-container">
-                    <ul>
-                  <li><a href="/appointment">Appointment</a></li> <!-- Update this line -->
+          </li>
 
-<!--                        <li><a href="#Consultations">Consultations</a></li>-->
-<!--                        <li><a href="#HIV services">HIV services</a></li>-->
-                    </ul>
-                </div>
-                <!-- Right container for image -->
-                <div class="right-container"></div>
+          <!-- Contacts -->
+          <li class="menu-item">
+            <a href="#contact" class="menu-link" aria-haspopup="true">
+              <span>Contacts</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Contacts submenu">
+              <a href="mailto:mainacharlesmca@gmail.com" role="menuitem">Email
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+                </span>
+              </a>
+              <a href="https://github.com/charles-maina" target="_blank" rel="noopener" role="menuitem">GitHub
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.24 3.4 9.68 8.13 11.25.6.1.82-.26.82-.58v-2.12c-3.31.73-4.01-1.43-4.01-1.43-.55-1.42-1.35-1.8-1.35-1.8-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.88 2.83 1.34 3.52 1.02.11-.78.42-1.34.76-1.65-2.64-.31-5.41-1.36-5.41-6.06 0-1.34.47-2.43 1.25-3.29-.13-.31-.54-1.58.12-3.3 0 0 1.02-.33 3.35 1.25.97-.27 2.01-.41 3.05-.42 1.04.01 2.08.15 3.05.42 2.33-1.58 3.35-1.25 3.35-1.25.66 1.72.25 2.99.12 3.3.78.86 1.25 1.95 1.25 3.29 0 4.71-2.78 5.74-5.43 6.05.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.57A11.51 11.51 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg>
+                </span>
+              </a>
+              <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" role="menuitem">LinkedIn
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.44 2.44 0 0 1 6.94 6.5zM4.75 8.75h4.37v10.5H4.75zm6.13 0h4.2v1.58h.06c.59-1.13 2.04-2.32 4.2-2.32 4.49 0 5.32 2.95 5.32 6.79v4.45H20.3v-3.95c0- .94-.02-2.14-1.3-2.14-1.3 0-1.5 1.02-1.5 2.07v4.02h-4.62z"/></svg>
+                </span>
+              </a>
             </div>
-        </div>
-        <!-- Logout button -->
+          </li>
 
-        <button class="logout" onclick="window.location.href='{{ url_for('logout') }}'">Log Out</button>
-
+          <!-- Projects -->
+          <li class="menu-item">
+            <!-- <a href="projects.html" class="menu-link">Projects
+            <a href="#projects" class="menu-link" aria-haspopup="true"> -->
+              <span>Projects</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Projects submenu">
+              <a href="#projects" role="menuitem">Featured
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+              </a>
+              <a href="projects.html" role="menuitem">All Projects
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </header>
+      <a href="index.html"></a>
 </body>
+
 </html>

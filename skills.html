@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Charles Maina — Portfolio</title>
-  <meta name="description" content="Landing page and portfolio for Charles Maina — ICT, web, and systems.">
-  <style>
-    :root{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+       :root{
       --blue:#0a74da;           /* theme blue (header/footer) */
       --blue-700:#085fb1;
       --text:#333;
@@ -100,59 +101,19 @@
     .hero{
       padding:56px 0 36px;
     }
-
-    /* THE RECTANGULAR CARDS HOLDING MAIN CONTENT I.E CORE SKILLS, FEATURED PROJECTS... */
-    .card{
+ .card{
       margin-top: -50PX;
       background:var(--card); border:1px solid #6a9bdfdc; border-bottom:4px solid var(--blue); border-right: 4px solid var(--blue); border-radius:16px;
       padding:22px 20px;
       box-shadow:0 6px 16px rgba(10,20,40,.06);
     }
-    .intro{
-      display:grid; grid-template-columns:120px 1fr; gap:20px; align-items:center;
-    }
 
-    /* SKILL SET AVATAR */
-    .intro .big-avatar{
-      width:134px; height:210px; border-radius:16px; object-fit:cover;
-      border:2px solid #006aff; background:#e8eef7;
-    }
-    .intro h1{margin:0 0 6px 0; font-size:1.6rem}
-    .intro p{margin:0; color:#4b5563}
 
-    .cta{
-      margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer;
-      border:1px solid #dbe5f3; background:#fff; color:var(--link);
-    }
-    .btn.primary{ background:var(--blue); color:#fff; border-color:var(--blue-700) }
-    .btn:hover{ filter:brightness(1.03) }
-
-    /* Footer */
-    footer{
-      margin-top:40px;
-      background:var(--blue); color:#fff; padding:18px 0;
-    }
-    footer .foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:.95rem }
-
-    /* Responsive */
-    @media (max-width:900px){
-      nav ul{gap:12px}
-    }
-    @media (max-width:720px){
-      .header-bar{ flex-wrap:wrap; row-gap:10px }
-      nav{ width:100% }
-      nav ul{ justify-content:flex-start; flex-wrap:wrap; gap:10px }
-      .intro{ grid-template-columns:1fr; text-align:left }
-      .intro .big-avatar{ width:96px; height:96px; border-radius:50% }
-    }
-  </style>
+    </style>
 </head>
+<a href="header.html"></a>
 <body>
-  <!-- Header -->
+       <!-- Header -->
   <header>
     <div class="container header-bar">
       <!-- Left: profile picture, then name on the same row -->
@@ -181,7 +142,7 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
                 </span>
               </a>
-              <a href="skills.html" role="menuitem">Skills
+              <a href="#kills.html" role="menuitem">Skills
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
                 </span>
@@ -247,39 +208,18 @@
       </nav>
     </div>
   </header>
+<!-- Main content -->
 
-  <!-- Main content -->
-  <main class="container hero">
-    <section class="card intro" id="about">
-      <!-- Big avatar below header; reuse same image path -->
-      <img class="big-avatar" src="images/Pro.png" alt="Portrait of Charles Maina" >
-      <div>
-        <h1>FULLSTACK DEVELOPER | CYBER SECURITY SPECIALIST | UI/UX DESIGNER.</h1>
-        <p style="text-align: justify;">
-        A Certified software engineer with practical experience in network & system administration, cyber security, web development, UI/UX Design and graphic design. Experienced in resolving hardware/software issues, configuring user systems, and supporting IT infrastructure. Committed to delivering friendly, efficient software products that solve your day-to-day workplace challenges by leveraging the unique capabilities of machine learning and AI models.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="projects.html" aria-label="See featured projects">
-            <!-- right arrow -->
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8 8-8z"/>Projects</svg>My Projects
-            <!--   -->
 
-             <!-- <a href="projects.html" role="menuitem">All Projects
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-                </span> -->
-            
-          </a>
-          <a class="btn" href="mailto:mainacharlesmca@gmail.com" aria-label="Email Charles Maina">
-            <!-- mail icon -->
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
-            Email Me
-          </a>
-        </div>
-      </div>
+      <!-- Main content -->
+  <main class="container">
+    <section class="hero">
+      <h1 style="color: #491111;">MY SKILLS CENTER.</h1>
+      <p style="color:#555"; >From my core technical skill set to the soft skills I posses, I welcome you to view each and examine how useful I can be to you and or your team</p>
     </section>
 
-    <section class="card" id="skills" style="margin-top:16px;">
+    
+     <section class="card" id="skills" style="margin-top:16px;">
       <h2 style="margin:0 0 8px 0; color:var(--blue)">Core Skills</h2>
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
@@ -296,52 +236,5 @@
 
       </ul>
     </section>
-
-    <section class="card" id="projects" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Featured Projects</h2>
-      <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The following are some of the system I have developed. Further details are on the Projects tab. Free Source code on my Github account.</pm>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
-        <article style="border:0.5px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
-          <h3 style="margin:0 0 6px 0;">Exam Attendance System</h3>
-          <p style="margin:0; color:#4b5563; text-align: justify;">PHP-based system for secure, efficient exam attendance tracking for Institutions of higher learning.</p>
-        </article>
-        <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px; background-color: #f2f6fb">
-          <h3 style="margin:0 0 6px 0;">Clinic Management System</h3>
-          <p style="margin:0; color:#4b5563;; text-align: justify;">Python project for streamlining medical operations and patient records in a clinic and hospital environments.</p>
-        </article>
-       <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
-          <h3 style="margin:0 0 6px 0;">Real Estate Management System</h3>
-          <p style="margin:0; color:#4b5563;  text-align: justify;">Developed using JavaFX, This system helps manage both commercial and rental properties. </p>
-          
-        </article>
-
-
-      </div>
-    </section>
-
-    <section class="card" id="contact" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Contact</h2>
-      <p style="margin:0">Email: <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">mca@gmail.com</a></p>
-      <p style="margin:6px 0 0 0">GitHub: <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Maina.</a></p>
-      <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Charles.</a></p>
-      <p style="margin:0">Phone: 0796303832 / 0110053971 </p>
-
-
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container foot">
-      <div>&copy; <span id="year"></span> Charles Maina</div>
-      <div>Built On 04.09.2025</div>
-    </div>
-  </footer>
-
-  <!-- Tiny inline script-free year fallback using CSS content not possible; so we set the year server-side or just keep current year text. For now, keep static: -->
-  <script>
-    /* Optional: auto-update footer year without external files */
-    (function(){ var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }})();
-  </script>
 </body>
 </html>

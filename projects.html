@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -19,24 +19,91 @@
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55;color:var(--text);background:var(--bg)}
     a{text-decoration:none;color:inherit}
 
-    header{background:var(--blue);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    /* Header */
+    header{
+      background:var(--blue);
+      color:#ffffff;
+      position:sticky; top:0; z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.08); 
+      max-height: 110PX;
+    }
+
+    /* header{background:var(--blue);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.1)} */
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
     .header-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+
     .brand{display:flex;align-items:center;gap:12px}
     .avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.7)}
-    .name{font-weight:700;font-size:1.1rem;white-space:nowrap}
+    /* MY PROFILE PHOTO HERE */
+    /* .avatar{
+      width:100px; height:100px; border-radius: 50%;
+      object-fit:cover; border:3px solid rgba(255,255,255,.7);
+      background:#e8eef7;
+    } */
+
+      /* MY PROFILE PHOTO HERE */
+    .avatar{
+      width:108px; height:108px; border-radius: 50%;
+      object-fit:cover; border:4px solid rgba(255,255,255,.7);
+      background:#e8eef7;
+      margin-top: -39px;
+      margin-left: -100PX;
+    }
+    /* .name{font-weight:700;font-size:1.1rem;white-space:nowrap} */
+
+
+    /* THE NAME IE CHA.. */
+    .name{
+       margin-top: -39px;
+      font-weight:500; font-size:3.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+/* 
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px}
     .menu-item{position:relative}
     .menu-link{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:600;padding:6px 6px;border-radius:8px}
-    .menu-link:hover{background:rgba(255,255,255,.15)}
-    .icon{width:14px;height:14px;line-height:0}
+    .menu-link:hover{background:rgba(255,255,255,.15)} */
+
+ /* Nav with dropdowns */
+    nav ul{list-style:none; ; padding:0; display:flex;  margin-top: 67px; align-items:center; gap:1px}
+    .menu-item{position:relative }
+    .menu-link{
+      display:inline-flex; align-items:center; gap:8px;
+      color:#fff; font-weight:600; padding:8px 6px; border-radius:8px;
+    }
+    .menu-link:hover{background:rgba(255,255,255,.12)}
+    .menu-link .icon{
+      display:inline-flex; width:16px; height:16px; line-height:0;
+      opacity:.9;
+    }
+
+    /* THE BOX Containing ITEMS OF THE MENU, I.E DOWNLOAD CV, ALL PROJECTS... */
+    .submenu{
+
+      /* LEFT-0 : To have to space to the left of it */
+      position:absolute; left:0; top:calc(79%);
+      background:#dbf0cd; color:var(--text);
+      border:3px solid #0026ff; border-radius:10px;
+      min-width:140px; box-shadow:0 12px 24px rgba(10,20,40,.12);
+      padding:-5px; display:none;
+    }
+    .submenu a{
+      display:flex; align-items:left; justify-content:space-between;
+      padding:3px; border-radius:8px; color:var(--text);
+    }
+    .submenu a:hover{background:#77b4ff}
+    /* Show submenu on hover or keyboard focus */
+    .menu-item:hover .submenu,
+    .menu-item:focus-within .submenu{ display:block }
+
+    
+    /* .icon{width:14px;height:14px;line-height:0}
     .submenu{position:absolute;top:calc(100% + 6px);right:0;background:#fff;color:var(--text);border:1px solid #e6ebf2;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,.08);display:none;min-width:180px;padding:6px}
     .submenu a{display:flex;align-items:center;justify-content:space-between;padding:8px;border-radius:6px}
     .submenu a:hover{background:#f1f5fa}
-    .menu-item:hover .submenu,.menu-item:focus-within .submenu{display:block}
+    .menu-item:hover .submenu,.menu-item:focus-within .submenu{display:block} */
 
     main{padding:50px 0}
-    .hero{margin-bottom:30px;text-align:center}
+    .hero{margin-bottom:30px;text-align:justify; font-weight: bolder; font-size: large;}
     .hero h1{font-size:2rem;margin:0;color:var(--blue)}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
     .card{background:var(--card);border:1px solid #e6ebf2;border-radius:12px;padding:18px;box-shadow:0 4px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;gap:8px}
@@ -53,40 +120,81 @@
   <header>
     <div class="container header-bar">
       <div class="brand">
-        <img src="images/profile.png" alt="Charles Maina" class="avatar">
+        <img src="images/admin0.jpg" alt="Charles Maina" class="avatar">
         <div class="name">Charles Maina</div>
       </div>
       <nav>
         <ul>
-          <li class="menu-item">
-            <!-- <a href="index.html#about" class="menu-link">About Me -->
+          <!-- <li class="menu-item">
+            <a href="index.html#about" class="menu-link">About Me.
               <span class="icon" aria-hidden="true">&#x25BE;</span>
             </a>
             <div class="submenu">
-              <a href="index.html#about">Overview</a>
-              <a href="index.html#skills">Skills</a>
-              <a href="docs/Charles_Maina_CV.pdf">Download CV</a>
+              <a href="index.html#about">Overview.</a>
+              <a href="index.html#skills">Skills.</a>
+              <a href="docs/Charles_Maina_CV.pdf">Download CV.</a>
             </div>
-          </li>
+          </li> -->
+
+           <!-- About -->
           <li class="menu-item">
-            <a href="index.html#contact" class="menu-link">Contacts
-              <span class="icon">&#x25BE;</span>
+            <a href="#about" class="menu-link" aria-haspopup="true">
+              <span>About Me</span>
+              <!-- chevron icon -->
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" focusable="false" role="img" aria-label="expand">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                </svg>
+              </span>
             </a>
-            <div class="submenu">
-              <a href="mailto:mainacharlesmca@gmail.com">Email</a>
-              <a href="https://github.com/charles-maina" target="_blank">GitHub</a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <div class="submenu" role="menu" aria-label="About submenu">
+              <a href="index.html" role="menuitem">Overview
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
+                </span>
+              </a>
+              <a href="skills.html" role="menuitem">Skills
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
+                </span>
+              </a>
+              <a href="docs/cv - CM.jpg" role="menuitem">Download CV
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
             </div>
           </li>
+
+          
           <li class="menu-item">
-            <a href="projects.html" class="menu-link">Projects
-              <span class="icon">&#x25BE;</span>
+            <!-- Contacts -->
+          <li class="menu-item">
+            <a href="#contact" class="menu-link" aria-haspopup="true">
+              <span>Contacts</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
             </a>
-            <div class="submenu">
-              <a href="projects.html#featured">Featured</a>
-              <a href="projects.html">All Projects</a>
+            <div class="submenu" role="menu" aria-label="Contacts submenu">
+              <a href="mailto:mainacharlesmca@gmail.com" role="menuitem">Email
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+                </span>
+              </a>
+              <a href="https://github.com/charles-maina" target="_blank" rel="noopener" role="menuitem">GitHub
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.24 3.4 9.68 8.13 11.25.6.1.82-.26.82-.58v-2.12c-3.31.73-4.01-1.43-4.01-1.43-.55-1.42-1.35-1.8-1.35-1.8-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.88 2.83 1.34 3.52 1.02.11-.78.42-1.34.76-1.65-2.64-.31-5.41-1.36-5.41-6.06 0-1.34.47-2.43 1.25-3.29-.13-.31-.54-1.58.12-3.3 0 0 1.02-.33 3.35 1.25.97-.27 2.01-.41 3.05-.42 1.04.01 2.08.15 3.05.42 2.33-1.58 3.35-1.25 3.35-1.25.66 1.72.25 2.99.12 3.3.78.86 1.25 1.95 1.25 3.29 0 4.71-2.78 5.74-5.43 6.05.43.38.81 1.12.81 2.26v3.35c0 .32.21.69.83.57A11.51 11.51 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg>
+                </span>
+              </a>
+              <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" role="menuitem">LinkedIn
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.44 2.44 0 0 1 6.94 6.5zM4.75 8.75h4.37v10.5H4.75zm6.13 0h4.2v1.58h.06c.59-1.13 2.04-2.32 4.2-2.32 4.49 0 5.32 2.95 5.32 6.79v4.45H20.3v-3.95c0- .94-.02-2.14-1.3-2.14-1.3 0-1.5 1.02-1.5 2.07v4.02h-4.62z"/></svg>
+                </span>
+              </a>
             </div>
           </li>
+       
         </ul>
       </nav>
     </div>
@@ -95,31 +203,51 @@
   <!-- Main content -->
   <main class="container">
     <section class="hero">
-      <h1>My Projects</h1>
-      <p style="color:#555">Here are some of the systems and applications I have built.</p>
+      <h1 style="color: #491111;">PROJECTS CENTER.</h1>
+      <p style="color:#555"; >Displayed below is a list of fully functional systems and applications I have built. If intrested in any, reach me out via <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Git hub</a>, <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">LinkedIn</a> or <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">E-Mail</a>. A 1 month free system testing is allowed after which you can suggest your preferred changes, updates needed and other details you would like added. Then you can have full ownership of either of them at a negotiable fee.</p>
     </section>
 
     <section class="grid" id="featured">
-      <article class="card">
+      <article class="card"; style="border:1px solid #00ff0d; border-left:4px solid var(--blue); border-right:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
         <h3>Exam Attendance Authentication System</h3>
         <p>Developed in PHP to authenticate and track exam attendance securely. It reduced manual effort and improved accountability.</p>
         <a href="#">View Details →</a>
       </article>
-      <article class="card">
+
+      <!-- ARTICLE= ...IS WHERE I HAVE THE STYLING AROUND THE BOXES OF THE PROJECTS DONE -->
+      <article class="card"; style="border:1px solid #00ff0d; border-left:4px solid var(--blue); border-right:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
         <h3>Campus Clinic Management System</h3>
         <p>Python-based application for managing student clinic records, patient histories, and appointment scheduling.</p>
         <a href="#">View Details →</a>
       </article>
-      <article class="card">
-        <h3>Electricity Bill History Tracker</h3>
+
+            <!-- ARTICLE= ...IS WHERE I HAVE THE STYLING AROUND THE BOXES OF THE PROJECTS DONE -->
+
+         <article class="card"; style="border:1px solid #00ff0d; border-left:4px solid var(--blue); border-right:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
+          <h3 >Real Estate Management System</h3>
+          <p style="margin:0; color:#4b5563;">Developed using JavaFX, This system helps manage both commercial and rental properties. </p>
+                  <a href="#">View Details →</a>
+
+        </article>
+            <!-- ARTICLE= ...IS WHERE I HAVE THE STYLING AROUND THE BOXES OF THE PROJECTS DONE -->
+
+      <article class="card"; style="border:1px solid #00ff0d; border-left:4px solid var(--blue); border-right:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
+        <h3>Electricity Bill Updates Tracker</h3>
         <p>A simple web tool that records and visualizes bill payment history for households and small businesses.</p>
         <a href="#">View Details →</a>
       </article>
-      <article class="card">
+
+            <!-- ARTICLE= ...IS WHERE I HAVE THE STYLING AROUND THE BOXES OF THE PROJECTS DONE -->
+
+      <article class="card"; style="border:1px solid #00ff0d; border-left:4px solid var(--blue); border-right:4px solid var(--blue); border-radius:12px; padding:12px; background:#fff">
         <h3>KRA Returns Filing Poster</h3>
         <p>Designed a digital poster template (blue theme) to promote KRA filing services for clients at M-Net Technologies.</p>
         <a href="#">View Details →</a>
       </article>
+
+            <!-- ARTICLE= ...IS WHERE I HAVE THE STYLING AROUND THE BOXES OF THE PROJECTS DONE -->
+
+   
     </section>
   </main>
 
@@ -127,11 +255,11 @@
   <footer>
     <div class="container foot">
       <div>&copy; <span id="year"></span> Charles Maina</div>
-      <div>Built with HTML & CSS</div>
+      <div>Intelectual property.</div>
     </div>
   </footer>
   <script>
     document.getElementById("year").textContent=new Date().getFullYear();
   </script>
 </body>
-</html> -->
+</html>
