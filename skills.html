@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Charles - Skills</title>
 
     <style>
 
@@ -34,7 +34,7 @@
       color:#ffffff;
       position:sticky; top:0; z-index:1000;
       box-shadow:0 2px 10px rgba(0,0,0,.08); 
-      max-height: 110PX;
+  
     }
     .container{
       max-width:1100px; margin:0 auto; padding:0 16px;
@@ -43,6 +43,7 @@
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
       gap:16px;
+      margin-bottom: 1px;
     }
 
     /* Left group: avatar + name */
@@ -55,18 +56,17 @@
       width:108px; height:108px; border-radius: 50%;
       object-fit:cover; border:4px solid rgba(255, 255, 255, 0.7);
       background:#e8eef7;
-      margin-top: -39px;
-      margin-left: -100PX;
+
     }
 
     /* THE NAME IE CHA.. */
     .name{
-       margin-top: -39px;
+  
       font-weight:500; font-size:3.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
 
     /* Nav with dropdowns */
-    nav ul{list-style:none; ; padding:0; display:flex;  margin-top: 67px; align-items:center; gap:1px}
+    nav ul{list-style:none; ; padding:0; display:flex; align-items:center; gap:1px}
     .menu-item{position:relative }
     .menu-link{
       display:inline-flex; align-items:center; gap:8px;
@@ -98,15 +98,29 @@
     .menu-item:focus-within .submenu{ display:block }
 
     /* Hero / main */
-    .hero{
+    /* .hero{
       padding:56px 0 36px;
     }
  .card{
-      margin-top: -50PX;
+      margin-top: -5x;
       background:var(--card); border:1px solid #6a9bdfdc; border-bottom:4px solid var(--blue); border-right: 4px solid var(--blue); border-radius:16px;
       padding:22px 20px;
       box-shadow:0 6px 16px rgba(10,20,40,.06);
-    }
+    } */
+
+
+ main{padding:50px 0}
+    .hero{margin-bottom:30px;text-align:justify; font-weight: bolder; font-size: large;}
+    .hero h1{font-size:2rem;margin:0;color:var(--blue)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px}
+    .card{background:var(--card);border:1px solid #006aff;border-radius:12px;padding:18px; border-right: 4px solid var(--blue); border-bottom: 4px solid var(--blue); box-shadow:0 4px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;gap:8px}
+    .card h3{margin:0;font-size:1.2rem;color:var(--blue)}
+    .card p{margin:0;color:#4b5563}
+    .card a{margin-top:auto;color:var(--link);font-weight:600;font-size:.9rem}
+
+    footer{margin-top:40px;background:var(--blue);color:#fff;padding:18px 0}
+    footer .foot{display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+    @media(max-width:720px){.header-bar{flex-wrap:wrap;row-gap:10px}nav ul{flex-wrap:wrap;gap:10px}}
 
 
     </style>
@@ -152,6 +166,14 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
                 </span>
               </a>
+
+                <a href="confidential.html" role="menuitem">My Certificates
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
+
+
             </div>
           </li>
 
@@ -214,27 +236,57 @@
       <!-- Main content -->
   <main class="container">
     <section class="hero">
-      <h1 style="color: #491111;">MY SKILLS CENTER.</h1>
-      <p style="color:#555"; >From my core technical skill set to the soft skills I posses, I welcome you to view each and examine how useful I can be to you and or your team</p>
+      <h1 style="color: #491111; color: #491111; text-align: center; text-decoration-line: underline; text-decoration-color: #001eff">MY SKILLS CENTER.</h1>
+      <p style="color:#555";>From my technical skills set to the soft skills, I invite you to view each and examine how useful I can be to you and or your team at large.</p>
     </section>
 
     
      <section class="card" id="skills" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Core Skills</h2>
+      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">CORE SKILLS</h2>
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Programming Languages (Python, Java, PHP).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
 
 
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Networking (LAN/WAN Setup, IP Configuration). </li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">CCTV Installation, Configuration and Troubleshooting.</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Hardware (PC Assembly, Maintenance, Repair).</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Networking (LAN/WAN Setup, IP Configuration). </li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">CCTV Installation, Configuration and Troubleshooting.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Hardware (PC Assembly, Maintenance, Repair).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
 
 
       </ul>
     </section>
+
+         
+
+     <section class="card" id="skills" style="margin-top:16px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">SOFT SKILLS</h2>      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Programming Languages (Python, Java, PHP).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
+
+
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Networking (LAN/WAN Setup, IP Configuration). </li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">CCTV Installation, Configuration and Troubleshooting.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Hardware (PC Assembly, Maintenance, Repair).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
+
+
+      </ul>
+    </section>
+</body>
+ <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <div>&copy; <span id="year"></span> Charles Maina</div>
+      <div>04.09.2025 | Intellectual Material.</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>

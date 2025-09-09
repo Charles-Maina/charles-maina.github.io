@@ -33,7 +33,7 @@
       color:#ffffff;
       position:sticky; top:0; z-index:1000;
       box-shadow:0 2px 10px rgba(0,0,0,.08); 
-      max-height: 110PX;
+
     }
     .container{
       max-width:1100px; margin:0 auto; padding:0 16px;
@@ -54,26 +54,26 @@
       width:108px; height:108px; border-radius: 50%;
       object-fit:cover; border:4px solid rgba(255, 255, 255, 0.7);
       background:#e8eef7;
-      margin-top: -39px;
-      margin-left: -100PX;
+      /* margin-top: -39px;
+      margin-left: PX; */
     }
 
     /* THE NAME IE CHA.. */
     .name{
-       margin-top: -39px;
+
       font-weight:500; font-size:3.125rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
 
     /* Nav with dropdowns */
-    nav ul{list-style:none; ; padding:0; display:flex;  margin-top: 67px; align-items:center; gap:1px}
+    nav ul{list-style:none; ; padding:0; display:flex; ; align-items:center; gap:1px}
     .menu-item{position:relative }
     .menu-link{
-      display:inline-flex; align-items:center; gap:8px;
+      display:inline-flex; align-items:center; gap:2px;
       color:#fff; font-weight:600; padding:8px 6px; border-radius:8px;
     }
-    .menu-link:hover{background:rgba(255,255,255,.12)}
+    .menu-link:hover{background:rgba(255, 2, 2, 0.12) }
     .menu-link .icon{
-      display:inline-flex; width:16px; height:16px; line-height:0;
+      display:inline-flex; width:16px; height:16px; line-height:;
       opacity:.9;
     }
 
@@ -138,8 +138,8 @@
     }
     footer .foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:.95rem }
 
-    /* Responsive
-    @media (max-width:900px){
+    /* Responsive */
+     @media (max-width:900px){
       nav ul{gap:12px}
     }
     @media (max-width:720px){
@@ -148,15 +148,9 @@
       nav ul{ justify-content:flex-start; flex-wrap:wrap; gap:10px }
       .intro{ grid-template-columns:1fr; text-align:left }
       .intro .big-avatar{ width:96px; height:96px; border-radius:50% }
-    } */
+    }  
 
     
-/* Responsive tweaks */
-@media (max-width:720px){
-  .avatar{ width:48px; height:48px; }
-  .name{ font-size:1.2rem; }
-  nav ul{ gap:12px; }
-}
   </style>
 </head>
 <body>
@@ -199,6 +193,13 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
                 </span>
               </a>
+
+              <a href="confidential.html" role="menuitem">My Certificates
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
+
             </div>
           </li>
 
@@ -262,7 +263,7 @@
       <!-- Big avatar below header; reuse same image path -->
       <img class="big-avatar" src="images/Pro.png" alt="Portrait of Charles Maina" >
       <div>
-        <h1>FULLSTACK DEVELOPER | CYBER SECURITY SPECIALIST | UI/UX DESIGNER.</h1>
+        <h1 style="text-decoration-line: underline; text-decoration-color: #0026ff;">SYSTEM ADMIN | FULLSTACK DEVELOPER | CYBER SECURITY SPECIALIST. </h1>
         <p style="text-align: justify;">
         A Certified software engineer with practical experience in network & system administration, cyber security, web development, UI/UX Design and graphic design. Experienced in resolving hardware/software issues, configuring user systems, and supporting IT infrastructure. Committed to delivering friendly, efficient software products that solve your day-to-day workplace challenges by leveraging the unique capabilities of machine learning and AI models.
         </p>
@@ -288,7 +289,8 @@
     </section>
 
     <section class="card" id="skills" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Core Skills</h2>
+      <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3"> 
+                <a href="skills.html">CORE SKILLS →</a></h2>
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
@@ -306,7 +308,9 @@
     </section>
 
     <section class="card" id="projects" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Featured Projects</h2>
+      <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3">
+          <a href="projects.html">FEATURED PROJECTS →</a></h2>
+
       <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The following are some of the system I have developed. Further details are on the Projects tab. Free Source code on my Github account.</pm>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
         <article style="border:0.5px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
@@ -315,7 +319,7 @@
         </article>
         <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px; background-color: #f2f6fb">
           <h3 style="margin:0 0 6px 0;">Clinic Management System</h3>
-          <p style="margin:0; color:#4b5563;; text-align: justify;">Python project for streamlining medical operations and patient records in a clinic and hospital environments.</p>
+          <p style="margin:0; color:#4b5563;; text-align: justify;">A python designed application that streamlines medical operations and patient records in clinic and hospital environments.</p>
         </article>
        <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
           <h3 style="margin:0 0 6px 0;">Real Estate Management System</h3>
@@ -328,12 +332,13 @@
     </section>
 
     <section class="card" id="contact" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue)">Contact</h2>
+      <h2 style="margin:0 0 2px 0; text-align: center; color:var(--blue); text-decoration-line: underline; text-decoration-color: #8d99f3">LET`S CONNECT :</h2>
+      <div class="CONTACT">
       <p style="margin:0">Email: <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">mca@gmail.com</a></p>
       <p style="margin:6px 0 0 0">GitHub: <a href="https://github.com/charles-maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Maina.</a></p>
       <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Charles.</a></p>
-      <p style="margin:0">Phone: 0796303832 / 0110053971 </p>
-
+      Phone: 0796303832 | 0110053971 </p>
+</div>
 
     </section>
   </main>
@@ -342,7 +347,7 @@
   <footer>
     <div class="container foot">
       <div>&copy; <span id="year"></span> Charles Maina</div>
-      <div>Built On 04.09.2025</div>
+      <div>04.09.2025 | IntelectualProperty</div>
     </div>
   </footer>
 
