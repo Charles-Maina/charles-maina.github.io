@@ -23,6 +23,7 @@
       line-height:1.55;
       color:var(--text);
       background:var(--bg);
+      background-color: #dbe0f7;
     }
     a{color:inherit;text-decoration:none}
     a:focus-visible, button:focus-visible { outline:3px solid rgba(10,116,218,.35); outline-offset:2px; border-radius:8px }
@@ -42,6 +43,7 @@
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
       gap:16px;
+      
     }
 
     /* Left group: avatar + name */
@@ -52,7 +54,7 @@
     /* MY PROFILE PHOTO HERE */
     .avatar{
       width:108px; height:108px; border-radius: 50%;
-      object-fit:cover; border:4px solid rgba(255, 255, 255, 0.7);
+      object-fit:cover; border:5px solid rgba(255, 255, 255, 0.7);
       background:#e8eef7;
       /* margin-top: -39px;
       margin-left: PX; */
@@ -73,7 +75,7 @@
     }
     .menu-link:hover{background:rgba(255, 2, 2, 0.12) }
     .menu-link .icon{
-      display:inline-flex; width:16px; height:16px; line-height:;
+      display:inline-flex; width:16px; height:16px; line: height 2px;;
       opacity:.9;
     }
 
@@ -159,7 +161,7 @@
     <div class="container header-bar">
       <!-- Left: profile picture, then name on the same row -->
       <div class="brand">
-        <img class="avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina" />
+        <img class="avatar" src="images/dp.jpg" alt="Portrait of Charles Maina" />
         <div class="name" aria-label="Name">CHARLES MAINA</div>
       </div>
 
@@ -168,7 +170,7 @@
         <ul>
           <!-- About -->
           <li class="menu-item">
-            <a href="#about" class="menu-link" aria-haspopup="true">
+            <a href="index.html" class="menu-link" aria-haspopup="true">
               <span>About Me</span>
               <!-- chevron icon -->
               <span class="icon" aria-hidden="true">
@@ -178,7 +180,7 @@
               </span>
             </a>
             <div class="submenu" role="menu" aria-label="About submenu">
-              <a href="mc.html" role="menuitem">Overview.
+              <a href="index.html" role="menuitem">Overview.
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
                 </span>
@@ -197,6 +199,12 @@
               <a href="confidential.html" role="menuitem">My Certificates.
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5 20h14v-2H5v2zM7 9h4V3h2v6h4l-5 5-5-5z"/></svg>
+                </span>
+              </a>
+
+              <a href="services.html" role="menuitem">My Services.
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
                 </span>
               </a>
 
@@ -233,7 +241,7 @@
           <!-- Projects -->
           <li class="menu-item">
             <!-- <a href="projects.html" class="menu-link">Projects -->
-            <a href="#" class="menu-link" aria-haspopup="true">
+            <a href="projects.html" class="menu-link" aria-haspopup="true">
               <span>Projects</span>
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
@@ -252,6 +260,32 @@
               </a>
             </div>
           </li>
+
+        
+          <!-- Projects -->
+          <li class="menu-item">
+          
+            <a href="services.html" class="menu-link" aria-haspopup="true"> 
+              <span>Services.</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Projects submenu">
+              <a href="services.html" role="menuitem">Featured.
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+              </a>
+              <a href="services.html" role="menuitem">All Services.
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                </span>
+              </a>
+            </div> 
+         </li>
+
+
         </ul>
       </nav>
     </div>
@@ -261,13 +295,13 @@
   <main class="container hero">
     <section class="card intro" id="about">
       <!-- Big avatar below header; reuse same image path -->
-      <img class="big-avatar" src="images/Pro.png" alt="Portrait of Charles Maina" >
+      <img class="big-avatar" src="images/netadmin.jpg" alt="Portrait of Charles Maina" >
       <div>
         <h1 style="text-decoration-line: underline; text-decoration-color: #0026ff;">SOFTWARE DEVELOPER | NETWORK ADMIN | CYBER SECURITY SPECIALIST. </h1>
         <p style="text-align: justify;">
-        A Certified software developer with practical experience in network & system administration, cyber security, web development, UI/UX Design and graphic design. Experienced in resolving hardware/software issues, configuring user systems, and supporting IT infrastructure. Committed to delivering friendly, efficient software products that solve your day-to-day workplace challenges by leveraging the unique capabilities of machine learning and AI models. <br> <br>
+        A Certified software engineer with practical experience in network & system administration, cyber security, web development, UI/UX Design and graphic design. Experienced in resolving hardware/software issues, configuring user systems, and supporting IT infrastructure. Committed to delivering friendly, efficient software products that solve your day-to-day workplace challenges by leveraging the unique capabilities of machine learning and AI models. <br><br> 
         Beyond technology, I am a fast learner, problem-solver and communicator who values teamwork and continuous growth. My career goal is to leverage technology to empower communities and organizations, while expanding my expertise in networking, software development and cybersecurity. <BR>
-          <br>Currently open to remote and onsite opportunities in ICT, Web development, cybersecurity and any other roles that will allow me to apply my technicall skills, contribute to innovative projects, and continue learning in a professional environment.
+          <br>Currently open to remote opportunities in software development, network administration, cybersecurity and any other roles that will allow me to apply my technicall skills, contribute to innovative projects, and continue learning in a professional environment. <br> If your are looking for a dedicated and adaptable professional who can deliver solution and add value to your team, I`d be glad to connect.
         </p>
         <div class="cta">
           <a class="btn primary" href="projects.html" aria-label="See featured projects">
@@ -293,6 +327,8 @@
     <section class="card" id="skills" style="margin-top:16px;">
       <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3"> 
                 <a href="skills.html">CORE SKILLS →</a></h2>
+<pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify">The following highlights summerize my skills and a technical expertise. Visit the <a href="skills.html">Skills</a> tab for in-depth details and demonstrations.</pm>
+
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
@@ -313,7 +349,7 @@
       <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3">
           <a href="projects.html">FEATURED PROJECTS. →</a></h2>
 
-      <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The following are some of the system I have developed. Further details are on the Projects tab. All the source code is freely available on my Github account for educational purposes only.</pm>
+      <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify">Here is a glimpse of my technical journey. Displayed below are some of selected projects that showcase my technical expertise and creativity. You can explore more details on the  <a href="projects.html">Projects</a> tab, where each system is briefly described. All source code is available on my GitHub account for educational, collaborative and professional reference.</pm>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
         <article style="border:0.5px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
           <h3 style="margin:0 0 6px 0;">Exam Attendance System.</h3>
@@ -333,6 +369,33 @@
       </div>
     </section>
 
+    <section class="card" id="servives" style="margin-top:16px;">
+      <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3"> 
+                <a href="services.html">MY SERVICES→</a></h2>
+<pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify"; >The following highlights summerize my services. Visit the <a href="services.html">Services</a> tab for in-depth details and demonstrations.</pm>
+
+      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">WEBSITE DEVELOPMENT.</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">GRAPHIC DESIGN.</li>
+                
+                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">NETWORK ADMINISTRATION.</li>
+
+                                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">SYSTEM ADMINISTRATION.</li>
+
+                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;"> PC HARDWARE REPAIR. </li>
+
+                               
+
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px ;">CCTV SURVEILLANCE SYSTEMS.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">IT CONSULTANCY SERVICES.</li>
+
+         <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; padding:10px;">CYBER SECURITY TRAINING.</li>
+
+
+
+      </ul>
+    </section>
+
     <section class="card" id="contact" style="margin-top:16px;">
       <h2 style="margin:0 0 2px 0; text-align: center; color:var(--blue); text-decoration-line: underline; text-decoration-color: #8d99f3">LET`S CONNECT :</h2>
       <div class="CONTACT">
@@ -340,7 +403,7 @@
       <p style="margin:6px 0 0 0">LinkedIn: <a href="https://linkedin.com/in/charles1maina" target="_blank" rel="noopener" style="color:var(--link); font-weight:600;">Charles.</a></p>
             <p style="margin:0">Email: <a href="mailto:mainacharlesmca@gmail.com" style="color:var(--link); font-weight:600;">mca@gmail.com</a></p>
 
-      Phone: 0796303832 | 0110053971. </p>
+      Phone: 0110053971 | 0796303832. </p>
 </div>
 
     </section>
@@ -350,7 +413,7 @@
   <footer>
     <div class="container foot">
       <div>&copy; <span id="year"></span> M. C. A</div>
-      <div>04.09.25 | mnet-technologies.</div>
+      <div>04.09.25 | <STRong> MNET-Technologies.</STRong></MNET-Technologies.></div>
     </div>
   </footer>
 

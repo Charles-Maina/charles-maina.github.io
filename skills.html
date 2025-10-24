@@ -24,6 +24,7 @@
       line-height:1.55;
       color:var(--text);
       background:var(--bg);
+      background-color: #dbe0f7;
     }
     a{color:inherit;text-decoration:none}
     a:focus-visible, button:focus-visible { outline:3px solid rgba(10,116,218,.35); outline-offset:2px; border-radius:8px }
@@ -110,16 +111,32 @@
 
 
  main{padding:50px 0}
-    .hero{margin-bottom:30px;text-align:justify; font-weight: bolder; font-size: large;}
+    .hero{margin-bottom:10px;text-align:justify; font-weight: bolder; font-size: large;}
     .hero h1{font-size:2rem;margin:0;color:var(--blue)}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px}
     .card{background:var(--card);border:1px solid #006aff;border-radius:12px;padding:18px; padding-top: 3px; border-right: 4px solid var(--blue); border-bottom: 4px solid var(--blue); box-shadow:0 4px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;gap:8px}
+
+    .card1{background:var(--card);border:.5px solid #006aff;border-radius:12px;padding:18px; padding-top: 3px; box-shadow:0 4px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;gap:8px; padding: 1px 16px;}
+
+    .card1 h1{margin-bottom: 0px;}
+    .card1 p{margin-top: 0px;}
+
+
     .card h3{margin:0;font-size:1.2rem;color:var(--blue)}
     .card p{margin:0;color:#4b5563}
     .card a{margin-top:auto;color:var(--link);font-weight:600;font-size:.9rem}
 
-    footer{margin-top:40px;background:var(--blue);color:#fff;padding:18px 0}
-    footer .foot{display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+    footer{
+      margin-top:40px;
+      background:var(--blue);
+      color:#fff;
+      padding:18px 0;
+    }
+    footer .foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:.95rem;
     @media(max-width:720px){.header-bar{flex-wrap:wrap;row-gap:10px}nav ul{flex-wrap:wrap;gap:10px}}
 
 
@@ -132,7 +149,7 @@
     <div class="container header-bar">
       <!-- Left: profile picture, then name on the same row -->
       <div class="brand">
-        <img class="avatar" src="images/admin0.jpg" alt="Portrait of Charles Maina" />
+        <img class="avatar" src="images/dp.jpg" alt="Portrait of Charles Maina" />
         <div class="name" aria-label="Name">CHARLES MAINA.</div>
       </div>
 
@@ -141,7 +158,7 @@
         <ul>
           <!-- About -->
           <li class="menu-item">
-            <a href="#about" class="menu-link" aria-haspopup="true">
+            <a href="index.html" class="menu-link" aria-haspopup="true">
               <span>About Me.</span>
               <!-- chevron icon -->
               <span class="icon" aria-hidden="true">
@@ -156,7 +173,7 @@
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10 17l5-5-5-5v10z"/></svg>
                 </span>
               </a>
-              <a href="#skills.html" role="menuitem">Skills.
+              <a href="skills.html" role="menuitem">Skills.
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
                 </span>
@@ -206,8 +223,7 @@
 
           <!-- Projects -->
           <li class="menu-item">
-            <!-- <a href="projects.html" class="menu-link">Projects
-            <a href="#projects" class="menu-link" aria-haspopup="true"> -->
+            <a href="projects.html" class="menu-link" aria-haspopup="true"> 
               <span>Projects.</span>
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
@@ -225,7 +241,28 @@
                 </span>
               </a>
             </div>
-          </li>
+         <!-- SERVICES -->
+          <li class="menu-item">
+          
+            <a href="services.html" class="menu-link" aria-haspopup="true"> 
+              <span>Services.</span>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+              </span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Projects submenu">
+              <a href="services.html" role="menuitem">Featured.
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+              </a>
+              <a href="services.html" role="menuitem">All Services.
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                </span>
+              </a>
+            </div> 
+         </li>
         </ul>
       </nav>
     </div>
@@ -235,15 +272,18 @@
 
       <!-- Main content -->
   <main class="container">
+    <br>
     <section class="hero">
+      <section class="card1">
       <h1 style="color: #491111; color: #491111; text-align: center; text-decoration-line: underline; text-decoration-color: #001eff">SKILLS CENTER.</h1>
-      <p style="color:#555";>From my technical skills set to the soft skills, I invite you to view each and examine how useful I can be to you and or your team at large.</p>
+      <p style="color:#555";> Over the years, I have developed a diverse set of technical and interpersonal skills that allow me to adapt and perform effectively in dynamic environments. My foundation in Computer Science has equipped me with practical experience in areas such as web design, system design and network setup. I continuously refine my abilities through hands-on projects, collaboration and self-driven learning, ensuring I stay aligned with emerging technologies and industry trends. <br>
+        The skills highlighted below reflect both my professional journey and my commitment to continuous growth and excellence in the ICT field. I invite you to explore each and discover how my skills can add value to your team or organization.</p> </section>
     </section>
 
     
      <section class="card" id="skills" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">CORE SKILLS</h2>
-      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">TECHNICAL SKILLS </h2>
+      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;"> 
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Programming Languages (Python, Java, PHP).</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
@@ -262,7 +302,7 @@
          
 
      <section class="card" id="skills" style="margin-top:16px;">
-      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">SOFT SKILLS</h2>      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+      <h2 style="margin:0 0 8px 0; color:var(--blue); color: #0e2aa7; text-align: center; text-decoration-line: underline; text-decoration-color: #642c1a">INTERPERSONAL SKILLS</h2>      <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); text-align: justify; word-spacing: normal; letter-spacing: normal; font-size:14px;  padding: 5px; line-height: 17px;"> Problem-Solving skills : I`m able to analyze technical issues, identify root causes and develop practical solutions.</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); text-align: justify; word-spacing: normal; letter-spacing: normal; font-size:14px; padding: 5px; line-height: 17px;">Communication Skills : My strong written and verbal communication enables me explain technical concepts in simple terms to non-technical staff.</li>
                 <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); text-align: justify; word-spacing: normal; letter-spacing: normal; font-size:14px;  padding: 5px; line-height: 17px;">Critical Thinking: Strong analytical mindest for evaluating systems, identifying vulnerabilities and then implementing proactive measures to enhance data security.</li>
@@ -280,14 +320,15 @@
     </section>
 </body>
  <!-- Footer -->
-  <footer>
+    <footer>
     <div class="container foot">
-      <div>&copy; <span id="year"> | </span> M. C. A</div>
-      <div>04.09.25 | MNET-Technologies.</div>
+      <div>&copy; <span id="year"></span> M. C. A</div>
+      <div>04.09.25 | <STRONG>MNET-Technologies.</STRONG></div>
     </div>
   </footer>
+
   <script>
-    document.getElementById("year").textContent=new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
