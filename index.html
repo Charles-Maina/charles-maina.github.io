@@ -149,7 +149,11 @@
       nav{ width:100% }
       nav ul{ justify-content:flex-start; flex-wrap:wrap; gap:10px }
       .intro{ grid-template-columns:1fr; text-align:left }
-      .intro .big-avatar{ width:96px; height:96px; border-radius:50% }
+      .intro .big-avatar{ width:96px; height: 126px; border-radius:16px; object-fit:cover;
+      border:2px solid #006aff; background:#e8eef7; margin: 1px;}
+      .intro h1{margin:0 0 0 0; font-size:1.4rem}
+   
+
     }  
 
     
@@ -330,16 +334,16 @@
 <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify">The following highlights summerize my skills and technical expertise. Visit the <strong><a href="skills.html">Skills</a> </strong> tab for in-depth details and demonstrations.</pm>
 
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">Programming Languages (Python, Java, PHP).</li>
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Operating Systems (Windows, Linux; Installations, Patching).</li>
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Programming Languages (Python, Java, PHP).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Operating Systems (Windows, Linux; Installations, Patching).</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Database Management (MySQL, SQL; Updates, Recovery ).</li>
 
 
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Networking (LAN/WAN Setup, IP Configuration). </li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">CCTV Installation, Configuration and Troubleshooting.</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Hardware (PC Assembly, Maintenance, Repair).</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Web Design (HTML, CSS, PHP, Python, BootStrap, JS).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Networking (LAN/WAN Setup, IP Configuration). </li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">CCTV Installation, Configuration and Troubleshooting.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Hardware (PC Assembly, Maintenance, Repair).</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-radius:10px; border-left:1px solid var(--blue); padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">Frameworks and Tools (Django, Git, Burpsuite, QGIS).</li>
 
 
       </ul>
@@ -349,17 +353,23 @@
       <h2 style="margin:0 0 8px 0; text-align: center; color:var(--blue);text-decoration-line: underline; text-decoration-color: #8d99f3">
           <a href="projects.html">FEATURED PROJECTS. →</a></h2>
 
-      <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify">Here is a glimpse of my technical journey. Displayed below are some of selected projects that showcase my technical expertise and creativity. You can explore more details on the <strong> <a href="projects.html">Projects</a> </strong> tab, where each system is briefly described. All source code is available on my GitHub account for educational, collaborative and professional reference.</pm>
+      <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify">
+        Here is a glimpse of my technical journey. Displayed below are some of selected projects that showcase my technical expertise and creativity.
+         You can explore more details on the <strong> <a href="projects.html">Projects</a> </strong> tab, where each system is briefly described. 
+         All source code is available on my GitHub account for educational, collaborative and professional reference.</pm>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;">
         <article style="border:0.5px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
-          <h3 style="margin:0 0 6px 0;">Exam Attendance System.</h3>
-          <p style="margin:0; color:#4b5563; text-align: justify;">A dynamic application that records, tracks, and verifies student exam attendance in real-time. Built for academic institutions, it supports secure logins for both students and administrators.
-Through automated data validation and reporting, the system helps institutions save time, improve compliance, and strengthen the integrity of academic records.</p>
+          <h3 style="margin:0 0 6px 0;  font-family: 'Georgia', 'Times New Roman', serif;"><strong>REAL ESTATE MANAGEMENT SYSTEM.</strong></h3>
+          <p style="margin:0; color:#4b5563; text-align: justify;">Developed using the latest programming languages, this system provides an all-in-one management ecosystem built to revolutionize 
+            the real estate sector. It combines strategic marketing visibility along high-traffic transport arteries with a robust backend for utility management and legal advisory services. 
+            By leveraging data-driven insights and a commitment to professional excellence, this <strong>REMS</strong> transforms standard real estate into high-performing
+             commercial and residential landmarks, allowing both owners and their clients to enjoy digitalized control while we handle every detail of the property lifecycle.</p>
         </article>
         <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px; background-color: #f2f6fb">
-          <h3 style="margin:0 0 6px 0;">Clinic Management System.</h3>
-          <p style="margin:0; color:#4b5563;; text-align: justify;">A Python-based clinic and hospital management system designed to streamline all essential clinic operations. It efficiently handles patient registration, diagnosis, treatment, and billing within a centralized database.
-The system enhances coordination among medical staff, reduces record duplication, and ensures faster service delivery through an intuitive and paperless workflow.</p>
+          <h3 style="margin:0 0 6px 0;  font-family: 'Georgia', 'Times New Roman', serif;"></strong>Clinic Management System.</strong></h3>
+          <p style="margin:0; color:#4b5563;; text-align: justify;">A Python-based clinic and hospital management system designed to streamline all essential clinic operations. 
+            It efficiently handles patient registration, diagnosis, treatment, and billing within a centralized database. The <strong>CMS</strong> enhances coordination among medical staff, 
+            reduces record duplication, and ensures faster service delivery through an intuitive and paperless workflow.</p>
         </article>
        <!-- <article style="border:1px solid #dbdbdb; border-left:1px solid var(--blue); border-radius:12px; padding:12px;  background-color: #f2f6fb">
           <h3 style="margin:0 0 6px 0;">Real Estate Management System.</h3>
@@ -377,19 +387,19 @@ The system enhances coordination among medical staff, reduces record duplication
 <pm style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seriftext-align: justify"; >The following highlights summerize my services. Visit the <STRong> <a href="services.html">Services</a> </STRong> tab for in-depth details and demonstrations.</pm>
 
       <ul style="margin:8px 0 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">WEBSITE DEVELOPMENT.</li>
-                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">GRAPHIC DESIGN & BRANDING.</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">WEBSITE DEVELOPMENT.</li>
+                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">GRAPHIC DESIGN & BRANDING.</li>
                 
-                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">NETWORK SETUP & ADMINISTRATION.</li>
+                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">NETWORK SETUP & ADMINISTRATION.</li>
 
-                                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">SYSTEM ADMINISTRATION.</li>
+                                <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">SYSTEM ADMINISTRATION.</li>
 
-                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;"> PC HARDWARE MAINTENANCE REPAIR. </li>
+                        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;"> PC HARDWARE MAINTENANCE REPAIR. </li>
 
                                
 
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px ;">CCTV & SURVEILLANCE SYSTEMS SETUP.</li>
-        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px;">CYBER SECURITY & IT CONSULTANCY SERVICES.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px ; font-family: 'Georgia', 'Times New Roman', serif;">CCTV & SURVEILLANCE SYSTEMS SETUP.</li>
+        <li style="background:#f2f6fb; border:1px solid #e6ebf2; border-left:1px solid var(--blue); border-radius:10px; padding:10px; font-family: 'Georgia', 'Times New Roman', serif;">CYBER SECURITY & IT CONSULTANCY SERVICES.</li>
 
 
 
